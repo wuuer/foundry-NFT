@@ -1,66 +1,42 @@
-## Foundry
+# IPFS (off chain)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+NFT store : https://opensea.io
 
-Foundry consists of:
+## install
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+https://github.com/ipfs/ipfs-desktop/releases
 
-## Documentation
+https://chromewebstore.google.com/detail/ipfs-companion/nibjojkomfdiaoajekhjakgkdhaomnch
 
-https://book.getfoundry.sh/
+# pinata (off chain)
 
-## Usage
+https://www.pinata.cloud/
 
-### Build
+# SVG (on chain)
 
-```shell
-$ forge build
+base64 encode your svg file as tokenURI
+
+```bash
+base64 -i [FILENAME]
 ```
 
-### Test
+format
 
-```shell
-$ forge test
+```
+data:image/svg+xml,base64,
+[your base64 result]
 ```
 
-### Format
+# ERC 721
 
-```shell
-$ forge fmt
+https://eips.ethereum.org/EIPS/eip-721
+
+# Deploy
+
+testnet
+
+```bash
+make deploy ARGS="--network sepolia"
 ```
 
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+# import NFT on Metamask by your contract address
